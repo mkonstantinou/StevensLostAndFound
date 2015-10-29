@@ -1,1 +1,16 @@
 /* Empty. Add your own CSS if you like */
+.stevens-primary-header {
+	background-color: #A32638;
+}
+
+.stevens-secondary-header {
+	background-color: #9A989A;
+}
+
+.white {
+	color: white;
+}
+
+.title {
+	color: white;
+}
