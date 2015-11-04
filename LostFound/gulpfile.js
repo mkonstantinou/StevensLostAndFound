@@ -52,10 +52,14 @@ gulp.task('git-check', function(done) {
   done();
 });
 
+gulp.task( 'reload', function()
+{
+	connect.reload();
+});
 
 gulp.task( 'watch-app', function()
 {
-    gulp.watch( [ './www/', 'js/**/*.js' ], [ 'reload' ] );
+    gulp.watch( [ 'www/', 'www/**/*.js' ], [ 'reload' ] );
     gulp.watch( [ 'app/scss/*' ], [ 'sass' ] );
 });
 
