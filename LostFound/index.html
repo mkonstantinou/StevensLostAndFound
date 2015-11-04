@@ -20,19 +20,43 @@
 
     <!-- your app's js -->
     <script src="www/js/app.js"></script>
+    <script src="www/controllers/appController.js"></script>
     <script src="www/controllers/homeController.js"></script>
   </head>
   <body ng-app="starter">
 		
     <ion-pane>
       <!-- header content -->
-			<ion-header-bar class="bar bar-header stevens-primary-header" style="text-align: center;">
-        <h1 class="title">Stevens Lost & Found</h1>
-				<button class="button button-icon icon ion-search" style="color: white;"></button>
-      </ion-header-bar>
+			
       
-      <ion-nav-view></ion-nav-view>
+      <ion-side-menus>
+        <!-- Left menu -->
+        <div ng-controller="appController">
+          <ion-side-menu side="left">
+            <ion-header-bar class="bar bar-header stevens-secondary-header">
+              <h1 class="title">Left Menu</h1>
+            </ion-header-bar>
+            <ion-content>
+              <ion-list>
+                <ion-item ng-repeat="item in items" href="#/{{ item.action }}">
+                  <h2>{{ item.title }}</h2>
+                </ion-item>
+              </ion-list>
+            </ion-content>
+          </ion-side-menu>
+          <ion-side-menu-content>
+            <ion-header-bar class="bar bar-header stevens-primary-header" style="text-align: center;">
+              <button class="button button-icon icon ion-navicon" style="color: white;" ng-click="toggleLeft()"></button>
+              <h1 class="title">Stevens Lost & Found</h1>
+              <button class="button button-icon icon ion-search" style="color: white;"></button>
+            </ion-header-bar>
+            <ion-nav-view></ion-nav-view>
+          </ion-side-menu-content>
+        </div>
+      </ion-side-menus>
+      
       
     </ion-pane>
   </body>
+  
 </html>
