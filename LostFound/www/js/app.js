@@ -17,3 +17,16 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+.config( function( $stateProvider, $urlRouterProvider ) 
+{
+  // List templates here
+  $stateProvider
+    .state( 'home', {
+      url: "/",
+      templateUrl: 'www/templates/home/home.html',
+      controllerName: 'homeController'
+    });
+  
+  $urlRouterProvider.otherwise( '/' );
+   
+});
