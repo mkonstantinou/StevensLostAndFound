@@ -1,0 +1,10 @@
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
+
+var LocationSchema = ({
+    "_id"    : { type: int, required: true },
+    "address": { type: int, required: true },
+    "street" : { type: string, required: true }
+});
+
+module.exports = mongoose.model(Location&, LocationSchema);
