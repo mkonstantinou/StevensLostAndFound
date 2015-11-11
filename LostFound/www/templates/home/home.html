@@ -1,6 +1,6 @@
 <!-- Tabs -->
-<ion-view title="Home">
-	<div ng-controller="homeController" class="tabs-striped tabs-top tabs-color-light">
+<ion-view ng-controller="homeController" title="Home">
+	<div class="tabs-striped tabs-top tabs-color-light">
 		<div class="tabs" style="background-color: #A32638;">
 			<a class="tab-item active" href="#">
 				<i class="icon ion-home"></i>
@@ -13,8 +13,27 @@
 		</div>
 	</div>
 	
-	<ion-content>
-		{{ message }}
-		<!-- ion-list feed -->
+	<ion-content style="padding-top: 50px;">
+		<!-- {{ message }}
+		ion-list feed -->
+		
+		 <ion-list>
+                <ion-item ng-repeat="item in list" href="#">
+					<div>
+						<a class="item item-thumbnail-left" href="#">
+						<img src="www/img/thumbnail.png">
+						<h2>{{item.title}}</h2>
+						<p>{{item.detail}}</p>
+						</a>
+					</div>
+                </ion-item>
+              </ion-list>
+		<!-- <div class="list" >
+				<a class="item item-thumbnail-left" href="#">
+					<img src="www/img/thumbnail.png">
+					<h2>Pretty Hate Machine</h2>
+					<p>Nine Inch Nails</p>
+				</a>
+			</div> -->
 	<ion-content>
 </ion-view>
