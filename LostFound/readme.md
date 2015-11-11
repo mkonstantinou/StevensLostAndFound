@@ -29,3 +29,6 @@ Ionic project for creating crossplatform Lost and Found application.
 ### Commit messages
 * Commits must be short and to the point: `Add requirejs dependency to run.js`. They must provide just enough information to be able to understand what you would be getting yourself into if you chose to look at the commit details.
 * Commits must be written with present-tense imperative-style, usually starting with `Add`, `Fix`, `Remove`, `Resolve`, `Update`, etc. They should never be written in the past tense.
+
+## Git branching overview
+* https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
