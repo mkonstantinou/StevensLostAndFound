@@ -29,13 +29,18 @@ angular.module('starter', ['ionic'])
 
     .state( 'lost', {
       url: "/lost",
-      templateUrl: 'www/templates/home/lost.html'
+      templateUrl: 'www/templates/home/lost.html',
+      controllerName: 'homeController'
     })
-    
-    .state('addItem' , {
+
+    .state( 'addItem' , {
       url: "/addItem",
-      templateUrl: 'www/templates/addItemform/addItemform.html',
-      controllerName: 'addItemController'
+      views: {
+        'addItem': {
+          templateUrl: 'www/templates/addItemform/addItemform.html',
+          controllerName: 'addItemController'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise( '/found' );
