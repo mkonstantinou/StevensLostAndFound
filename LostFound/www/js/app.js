@@ -64,7 +64,7 @@ angular.module('starter', ['ionic'])
           templateUrl: 'www/templates/leftMenu/profile.html'
         }
       }
-    });
+    })
 
     .state( 'foundItems',  {
       url: "/found/:itemId",
@@ -76,7 +76,7 @@ angular.module('starter', ['ionic'])
       url: "/lost/:itemId",
       templateUrl: 'www/templates/details/lostDetails.html',
       controllerName: 'detailsController'
-    })
+    });
 
 
   $urlRouterProvider.otherwise( '/found' );
