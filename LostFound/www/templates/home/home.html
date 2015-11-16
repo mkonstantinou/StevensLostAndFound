@@ -5,9 +5,9 @@
 		ion-list feed -->
 
 		<ion-list>
-			<ion-item ng-repeat="item in list" href="#">
+			<ion-item mc-controller="detailsController" ng-repeat="item in items" href="#/found/{{item.id}}">
 				<div>
-					<a class="item item-thumbnail-left" href="#">
+					<a class="item item-thumbnail-left" href="#/found/{{item.id}}">
 					<img src="www/img/thumbnail.png">
 					<h2>{{item.title}}</h2>
 					<p>{{item.detail}}</p>

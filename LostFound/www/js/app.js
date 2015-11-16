@@ -50,6 +50,7 @@ angular.module('starter', ['ionic'])
       controllerName: 'searchController'
     })
 
+
     .state( 'leftMenu', {
       url: "/leftMenu",
       abstract: true,
@@ -64,6 +65,19 @@ angular.module('starter', ['ionic'])
         }
       }
     });
+
+    .state( 'foundItems',  {
+      url: "/found/:itemId",
+      templateUrl: 'www/templates/details/foundDetails.html',
+      controllerName: 'detailsController'
+    })
+
+    .state( 'lostItems',  {
+      url: "/lost/:itemId",
+      templateUrl: 'www/templates/details/lostDetails.html',
+      controllerName: 'detailsController'
+    })
+
 
   $urlRouterProvider.otherwise( '/found' );
 
