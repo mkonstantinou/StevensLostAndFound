@@ -1,6 +1,7 @@
 angular.module( 'starter' )
 	.controller( 'homeController', function ( $scope ) 
 	{
+
 		$scope.list = [
         {
 			title:'Item 1',
@@ -19,5 +20,6 @@ angular.module( 'starter' )
 			}
     ];
 	});
+	
 
 
