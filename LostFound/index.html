@@ -22,12 +22,13 @@
     <script src="www/js/app.js"></script>
     <script src="www/controllers/appController.js"></script>
     <script src="www/controllers/homeController.js"></script>
+    <script src-"www/controllers/addItemController.js"></script>
   </head>
   <body ng-app="starter">
-		
+    
     <ion-pane>
       <!-- header content -->
-			
+      
       <ion-side-menus>
         <!-- Left menu -->
         <div ng-controller="appController">
@@ -48,18 +49,22 @@
               <button class="button button-icon icon ion-navicon" style="color: white;" ng-click="toggleLeft()"></button>
               <h1 class="title">Stevens Lost & Found</h1>
               <button class="button button-icon icon ion-search" style="color: white;"></button>
-			  
+        
             </ion-header-bar>
-			
+      
             <ion-nav-view>
-			
-			</ion-nav-view>
+      
+      </ion-nav-view>
           </ion-side-menu-content>
         </div>
       </ion-side-menus>
       
     </ion-pane>
-	
+    <div class="float-button" ng-controller="addItemController">
+      <span class="height-fix">
+        <a class="button button-icon icon ion-android-add-circle" ng-click="openModal()"></a>
+      </span>
+    </div>
   </body>
   
 </html>

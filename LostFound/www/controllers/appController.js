@@ -24,6 +24,6 @@ angular.module( 'starter' )
 			$ionicSideMenuDelegate.toggleLeft();
 		};
 		
-		
 	});
+
 	
