@@ -1,31 +1,20 @@
 <!-- Tabs -->
 <ion-view ng-controller="searchController" title="Home">
-	<div class="tabs-striped tabs-top tabs-color-light">
-		<div class="tabs" style="background-color: #A32638;">
-			<a class="tab-item active" href="#">
-					Lost Items
-			</a>
-			<a class="tab-item" href="#">
-				Found Items
-			</a>
-		</div>
-	</div>
-	
 	<ion-content style="padding-top: 50px;">
 		<!-- {{ message }}
 		ion-list feed -->
-		
-		 <ion-list>
-                <ion-item ng-repeat="item in list" href="#">
-					<div>
-						<a class="item item-thumbnail-left" href="#">
+
+		<ion-list>
+      <ion-item ng-repeat="item in list" href="#">
+				<div>
+					<a class="item item-thumbnail-left" href="#">
 						<img src="www/img/thumbnail.png">
 						<h2>{{item.title}}</h2>
 						<p>{{item.detail}}</p>
-						</a>
-					</div>
-                </ion-item>
-              </ion-list>
+					</a>
+				</div>
+      </ion-item>
+    </ion-list>
 		<!-- <div class="list" >
 				<a class="item item-thumbnail-left" href="#">
 					<img src="www/img/thumbnail.png">
@@ -33,5 +22,5 @@
 					<p>Nine Inch Nails</p>
 				</a>
 			</div> -->
-	<ion-content>
+	</ion-content>
 </ion-view>

@@ -17,6 +17,7 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
 .config( function( $stateProvider, $urlRouterProvider )
 {
   // List templates here
@@ -40,7 +41,8 @@ angular.module('starter', ['ionic'])
           templateUrl: 'www/templates/addItemform/addItemform.html',
           controllerName: 'addItemController'
         }
-      })
+      }
+    })
 
     .state( 'search' , {
       url: "/search",
