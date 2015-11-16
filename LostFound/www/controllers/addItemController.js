@@ -1,7 +1,7 @@
 angular.module( 'starter' )
 	.controller('addItemController', function($scope, $ionicModal) 
 	{
-	  $ionicModal.fromTemplateUrl('www/templates/form/addItemform.html', 
+	  $ionicModal.fromTemplateUrl('addItemform.html', 
 	  {
 	    scope: $scope,
 	    animation: 'slide-in-up'

@@ -1,38 +1,39 @@
-<ion-view ng-controller="addItemController" title="Add Item">
-	
-  <ion-modal-view>
-    	
-      <form name="addItem" novalidate>
-        <ion-header-bar class="bar-positive fix buttons">
-            <a class="button" ng-click="closeModal()">Cancel</a>
-      		  <h1 class="title">Add Item</h1>
-    	 </ion-header-bar>
-   	 	
-        <ion-content>
-            <div class = "radio">
-        		  <ion-radio ng-model="choice">Lost</ion-radio>
-            </div>
-            <div class = "radio">
-              <ion-radio ng-model="choice">Found</ion-radio>
-            </div>
-              <div class="add"><i class="icon ion-upload"></i>
-                  <div class="instructions">Upload Photo</div>
-                </div>
-              <label class="item item-input large">
-                    <input type="text" placeholder="Title">
-              </label>
-              <label class="item item-input large">
-                    <input type="text" placeholder="Description">
-              </label> 
-              <label class="item item-input large">
-                    <input type="date">
-              </label> 
-              <label class="item item-input large">
-                    <input type="text" placeholder="Location">
-              </label>            
-      	</ion-content>
-      </form>
 
-  </ion-modal-view>
+<body>
+  <ion-view ng-controller="addItemController" title="Add Item">
+    <ion-modal-view>
+        <form name="addItem" novalidate>
+          <ion-header-bar class="bar-positive fix buttons">
+              <a class="button" ng-click="closeModal()">Cancel</a>
+        		  <h1 class="title">Add Item</h1>
+      	 </ion-header-bar>
+          <ion-content>
+              <div class = "radio">
+          		  <ion-radio ng-model="choice">Lost</ion-radio>
+              </div>
+              <div class = "radio">
+                <ion-radio ng-model="choice">Found</ion-radio>
+              </div>
+                <div class="add"><i class="icon ion-upload"></i>
+                    <div class="instructions">Upload Photo</div>
+                  </div>
+                <label class="item item-input large">
+                      <input type="text" placeholder="Title">
+                </label>
+                <label class="item item-input large">
+                      <input type="text" placeholder="Description">
+                </label> 
+                <label class="item item-input large">
+                      <input type="date">
+                </label> 
+                <label class="item item-input large">
+                      <input type="text" placeholder="Location">
+                </label>            
+        	</ion-content>
+        </form>
 
-</ion-view>
+    </ion-modal-view>
+
+  </ion-view>
+</body>
+
