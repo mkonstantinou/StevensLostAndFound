@@ -45,3 +45,8 @@
   margin-top: -20px; /* Note, this must be half the font size */
 
 }
+
+ion-radio
+{
+  display:inline;
+}

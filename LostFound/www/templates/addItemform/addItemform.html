@@ -9,7 +9,27 @@
     	 </ion-header-bar>
    	 	
         <ion-content>
-        		Content here
+            <div class = "radio">
+        		  <ion-radio ng-model="choice">Lost</ion-radio>
+            </div>
+            <div class = "radio">
+              <ion-radio ng-model="choice">Found</ion-radio>
+            </div>
+              <div class="add"><i class="icon ion-upload"></i>
+                  <div class="instructions">Upload Photo</div>
+                </div>
+              <label class="item item-input large">
+                    <input type="text" placeholder="Title">
+              </label>
+              <label class="item item-input large">
+                    <input type="text" placeholder="Description">
+              </label> 
+              <label class="item item-input large">
+                    <input type="date">
+              </label> 
+              <label class="item item-input large">
+                    <input type="text" placeholder="Location">
+              </label>            
       	</ion-content>
       </form>
 
