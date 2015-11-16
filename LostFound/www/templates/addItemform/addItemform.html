@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ion-modal-view>
   <form name="addItem" novalidate>
     <ion-header-bar class="bar-positive fix buttons">
@@ -30,3 +31,91 @@
   	</ion-content>
   </form>
 </ion-modal-view>
+=======
+<<<<<<< HEAD
+ <ion-modal-view title="Add Item">
+    <form name="addItem" novalidate>
+      <ion-header-bar class="bar-positive fix-buttons stevens-primary-header">
+        <a class="button" ng-click="closeModal()">Cancel</a>
+        <h1 class="title">Add Item</h1>
+      </ion-header-bar>
+      <ion-content has-bouncing="true">
+        <div class = "button-bar button-small">
+            <ion-radio  class="button button-block button-small" ng-model="choice">Lost</ion-radio>
+            <ion-radio class="button button-block button-small" ng-model="choice">Found</ion-radio>
+        </div>
+        <div class="row" >
+          <div class="col">
+            <label class="item item-input">
+              <input type="text" placeholder="Item Name">
+            </label>
+         </div>
+        </div>
+        <div style="text-align:center">
+          <div><i class="icon ion-upload"></i>
+            <div>Tap to upload photo</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input">
+              <input type="text" placeholder="Location">
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input">
+              <input type="date" placeholder="When">
+            </label>
+          </div>
+        </div>
+        <div class="row description-row">
+          <div class="col">
+            <label class="item item-input text">
+              <textarea placeholder="Description" rows="5"></textarea>
+            </label>
+          </div>
+        </div>
+        <button class = "button button-block padding" ng-click ="closeModal()">Confirm</button>
+      </ion-content>
+    </form>
+=======
+<ion-view title="Add Item">
+
+  <ion-modal-view>
+
+      <form name="addItem" novalidate>
+        <ion-header-bar class="bar-positive fix buttons">
+            <button class="button" ng-click="closeModal()">Cancel</button>
+      		  <h1 class="title">Add Item</h1>
+    	 </ion-header-bar>
+
+        <ion-content>
+            <div class = "radio">
+        		  <ion-radio ng-model="choice">Lost</ion-radio>
+            </div>
+            <div class = "radio">
+              <ion-radio ng-model="choice">Found</ion-radio>
+            </div>
+              <div class="add"><i class="icon ion-upload"></i>
+                  <div class="instructions">Upload Photo</div>
+                </div>
+              <label class="item item-input large">
+                    <input type="text" placeholder="Title">
+              </label>
+              <label class="item item-input large">
+                    <input type="text" placeholder="Description">
+              </label>
+              <label class="item item-input large">
+                    <input type="date">
+              </label>
+              <label class="item item-input large">
+                    <input type="text" placeholder="Location">
+              </label>
+      	</ion-content>
+      </form>
+
+>>>>>>> 38ac42f5aa594f0a37eafc1ae81a00417debb6af
+  </ion-modal-view>
+>>>>>>> 449694edcbbac4c649cdaf6a9bbed04f4537c4b1
