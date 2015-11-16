@@ -48,7 +48,19 @@ angular.module('starter', ['ionic'])
       url: "/search",
       templateUrl: 'www/templates/search/search.html',
       controllerName: 'searchController'
-    });
+    })
+
+    .state( 'foundItems',  {
+      url: "/found/:itemId",
+      templateUrl: 'www/templates/details/foundDetails.html',
+      controllerName: 'detailsController'
+    })
+
+    .state( 'lostItems',  {
+      url: "/lost/:itemId",
+      templateUrl: 'www/templates/details/lostDetails.html',
+      controllerName: 'detailsController'
+    })
 
   $urlRouterProvider.otherwise( '/found' );
 
