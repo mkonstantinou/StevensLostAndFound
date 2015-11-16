@@ -1,22 +1,9 @@
 <!-- Tabs -->
-<ion-view ng-controller="homeController" title="Home">
-	<div class="tabs-striped tabs-top tabs-color-light">
-		<div class="tabs" style="background-color: #A32638;">
-			<a class="tab-item active" href="#">
-				<i class="icon ion-home"></i>
-					Lost Items
-			</a>
-			<a class="tab-item" href="#">
-				<i class="icon ion-star"></i>
-				Found Items
-			</a>
-		</div>
-	</div>
-	
+<ion-view ng-controller="homeController" title="Found">
 	<ion-content style="padding-top: 50px;">
 		<!-- {{ message }}
 		ion-list feed -->
-		
+
 		 <ion-list>
                 <ion-item ng-repeat="item in list" href="#">
 					<div>

@@ -17,21 +17,27 @@ angular.module('starter', ['ionic'])
     }
   });
 })
-.config( function( $stateProvider, $urlRouterProvider ) 
+.config( function( $stateProvider, $urlRouterProvider )
 {
   // List templates here
   $stateProvider
-    .state( 'home', {
-      url: "/",
+    .state( 'found', {
+      url: "/found",
       templateUrl: 'www/templates/home/home.html',
       controllerName: 'homeController'
     })
+
+    .state( 'lost', {
+      url: "/lost",
+      templateUrl: 'www/templates/home/lost.html'
+    })
+    
     .state('addItem' , {
       url: "/addItem",
       templateUrl: 'www/templates/addItemform/addItemform.html',
       controllerName: 'addItemController'
     });
-  
-  $urlRouterProvider.otherwise( '/' );
-   
+
+  $urlRouterProvider.otherwise( '/found' );
+
 });
