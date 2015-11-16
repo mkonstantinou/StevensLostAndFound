@@ -48,6 +48,21 @@ angular.module('starter', ['ionic'])
       url: "/search",
       templateUrl: 'www/templates/search/search.html',
       controllerName: 'searchController'
+    })
+
+    .state( 'leftMenu', {
+      url: "/leftMenu",
+      abstract: true,
+      templateUrl: 'www/templates/leftMenu/leftMenu.html'
+    })
+
+    .state( 'leftMenu.profile', {
+      url: "/profile",
+      views: {
+        'left-profile': {
+          templateUrl: 'www/templates/leftMenu/profile.html'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise( '/found' );
