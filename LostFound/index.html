@@ -22,7 +22,8 @@
     <script src="www/js/app.js"></script>
     <script src="www/controllers/appController.js"></script>
     <script src="www/controllers/homeController.js"></script>
-    <script src-"www/controllers/addItemController.js"></script>
+    <script src="www/controllers/searchController.js"></script>
+    <script src="www/controllers/addItemController.js"></script>
   </head>
   <body ng-app="starter">
     
@@ -45,13 +46,22 @@
             </ion-content>
           </ion-side-menu>
           <ion-side-menu-content>
-            <ion-header-bar class="bar bar-header stevens-primary-header" style="text-align: center;">
-              <button class="button button-icon icon ion-navicon" style="color: white;" ng-click="toggleLeft()"></button>
-              <h1 class="title">Stevens Lost & Found</h1>
-              <button class="button button-icon icon ion-search" style="color: white;"></button>
-        
+            <ion-header-bar class="bar bar-header stevens-primary-header">
+              <div  ng-show="showtitle">
+                <button class="button button-icon icon ion-navicon" style="color: white;" ng-click="toggleLeft()"></button>
+                <h1 class="title"ng-show="showtitle" >Stevens Lost & Found</h1>
+                <button class="button button-icon icon ion-search" style="color: white;" ng-click="search()"></button>
+              </div>
+              <div class="item-input-inset" ng-show="showsearch">
+                <button class="button button-icon icon ion-navicon" style="color: white;" ng-click="toggleLeft()"></button>
+                <label class="item-input-wrapper">
+                  <i class="icon ion-ios-search placeholder-icon"></i>
+                  <input type="search" placeholder="Search">
+                </label>
+                <button class="button button-icon icon ion-search" style="color: white;" ng-click="gosearch()"></button>
+              </div>
             </ion-header-bar>
-      
+            
             <ion-nav-view>
       
       </ion-nav-view>
