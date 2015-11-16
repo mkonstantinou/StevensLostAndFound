@@ -40,7 +40,12 @@ angular.module('starter', ['ionic'])
           templateUrl: 'www/templates/addItemform/addItemform.html',
           controllerName: 'addItemController'
         }
-      }
+      })
+
+    .state( 'search' , {
+      url: "/search",
+      templateUrl: 'www/templates/search/search.html',
+      controllerName: 'searchController'
     });
 
   $urlRouterProvider.otherwise( '/found' );
