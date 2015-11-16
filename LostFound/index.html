@@ -22,13 +22,20 @@
     <script src="www/js/app.js"></script>
     <script src="www/controllers/appController.js"></script>
     <script src="www/controllers/homeController.js"></script>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    <script src="www/controllers/searchController.js"></script>
+>>>>>>> master
+>>>>>>> 38ac42f5aa594f0a37eafc1ae81a00417debb6af
     <script src="www/controllers/addItemController.js"></script>
   </head>
   <body ng-app="starter">
-    
+
     <ion-pane>
       <!-- header content -->
-      
+
       <ion-side-menus>
         <!-- Left menu -->
         <div ng-controller="appController">
@@ -45,26 +52,39 @@
             </ion-content>
           </ion-side-menu>
           <ion-side-menu-content>
-            <ion-header-bar class="bar bar-header stevens-primary-header" style="text-align: center;">
-              <button class="button button-icon icon ion-navicon" style="color: white;" ng-click="toggleLeft()"></button>
-              <h1 class="title">Stevens Lost & Found</h1>
-              <button class="button button-icon icon ion-search" style="color: white;"></button>
-        
+            <ion-header-bar class="bar bar-header stevens-primary-header">
+              <div  ng-show="showtitle">
+                <button class="button button-icon icon ion-navicon" style="color: white;" ng-click="toggleLeft()"></button>
+                <h1 class="title"ng-show="showtitle" >Stevens Lost & Found</h1>
+                <button class="button button-icon icon ion-search" style="color: white;" ng-click="search()"></button>
+              </div>
+              <div class="item-input-inset" ng-show="showsearch">
+                <button class="button button-icon icon ion-navicon" style="color: white;" ng-click="toggleLeft()"></button>
+                <label class="item-input-wrapper">
+                  <i class="icon ion-ios-search placeholder-icon"></i>
+                  <input type="search" placeholder="Search">
+                </label>
+                <button class="button button-icon icon ion-search" style="color: white;" ng-click="gosearch()"></button>
+              </div>
             </ion-header-bar>
-      
-            <ion-nav-view>
-      
-      </ion-nav-view>
+
+            <ion-nav-view></ion-nav-view>
           </ion-side-menu-content>
         </div>
       </ion-side-menus>
-      
+
     </ion-pane>
+<<<<<<< HEAD
     <div class="float-button" ng-controller="addItemController" >
+=======
+
+    <div class="float-button" ng-controller="addItemController">
+>>>>>>> 38ac42f5aa594f0a37eafc1ae81a00417debb6af
       <span class="height-fix">
-        <a class="button button-icon icon ion-android-add-circle" ng-click="openModal()"></a>
+        <button class="button button-icon icon ion-android-add-circle" ng-click="openModal()"></button>
       </span>
     </div>
+
   </body>
-  
+
 </html>

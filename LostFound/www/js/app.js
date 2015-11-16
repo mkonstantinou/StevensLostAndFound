@@ -17,25 +17,45 @@ angular.module('starter', ['ionic'])
     }
   });
 })
-.config( function( $stateProvider, $urlRouterProvider ) 
+.config( function( $stateProvider, $urlRouterProvider )
 {
   // List templates here
   $stateProvider
-    .state( 'home', {
-      url: "/",
+    .state( 'found', {
+      url: "/found",
       templateUrl: 'www/templates/home/home.html',
       controllerName: 'homeController'
     })
-    .state('addItem' , {
+
+    .state( 'lost', {
+      url: "/lost",
+      templateUrl: 'www/templates/home/lost.html',
+      controllerName: 'homeController'
+    })
+
+    .state( 'addItem' , {
       url: "/addItem",
       views: {
+<<<<<<< HEAD
         addItem: {
           templateUrl: 'www/templates/addItemform/addItemform.html',
           controllerName: 'addItemController'
         }
       }
+=======
+        'addItem': {
+          templateUrl: 'www/templates/addItemform/addItemform.html',
+          controllerName: 'addItemController'
+        }
+      })
+
+    .state( 'search' , {
+      url: "/search",
+      templateUrl: 'www/templates/search/search.html',
+      controllerName: 'searchController'
+>>>>>>> 38ac42f5aa594f0a37eafc1ae81a00417debb6af
     });
-  
-  $urlRouterProvider.otherwise( '/' );
-   
+
+  $urlRouterProvider.otherwise( '/found' );
+
 });

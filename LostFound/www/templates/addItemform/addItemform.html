@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  <ion-modal-view title="Add Item">
     <form name="addItem" novalidate>
       <ion-header-bar class="bar-positive fix-buttons stevens-primary-header">
@@ -45,4 +46,41 @@
         <button class = "button button-block padding" ng-click ="closeModal()">Confirm</button>
       </ion-content>
     </form>
+=======
+<ion-view title="Add Item">
+
+  <ion-modal-view>
+
+      <form name="addItem" novalidate>
+        <ion-header-bar class="bar-positive fix buttons">
+            <button class="button" ng-click="closeModal()">Cancel</button>
+      		  <h1 class="title">Add Item</h1>
+    	 </ion-header-bar>
+
+        <ion-content>
+            <div class = "radio">
+        		  <ion-radio ng-model="choice">Lost</ion-radio>
+            </div>
+            <div class = "radio">
+              <ion-radio ng-model="choice">Found</ion-radio>
+            </div>
+              <div class="add"><i class="icon ion-upload"></i>
+                  <div class="instructions">Upload Photo</div>
+                </div>
+              <label class="item item-input large">
+                    <input type="text" placeholder="Title">
+              </label>
+              <label class="item item-input large">
+                    <input type="text" placeholder="Description">
+              </label>
+              <label class="item item-input large">
+                    <input type="date">
+              </label>
+              <label class="item item-input large">
+                    <input type="text" placeholder="Location">
+              </label>
+      	</ion-content>
+      </form>
+
+>>>>>>> 38ac42f5aa594f0a37eafc1ae81a00417debb6af
   </ion-modal-view>
