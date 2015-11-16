@@ -26,10 +26,15 @@ angular.module('starter', ['ionic'])
       templateUrl: 'www/templates/home/home.html',
       controllerName: 'homeController'
     })
-    .state('addItem' , {
+    .state( 'addItem' , {
       url: "/addItem",
       templateUrl: 'www/templates/addItemform/addItemform.html',
       controllerName: 'addItemController'
+    })
+    .state( 'search' , {
+      url: "/search",
+      templateUrl: 'www/templates/search/search.html',
+      controllerName: 'searchController'
     });
   
   $urlRouterProvider.otherwise( '/' );
