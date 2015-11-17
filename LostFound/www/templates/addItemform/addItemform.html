@@ -1,32 +1,37 @@
 <ion-modal-view>
   <form name="addItem" novalidate>
-    <ion-header-bar class="bar-positive fix buttons">
-      <button class="button" ng-click="closeModal()">Cancel</button>
+    <ion-header-bar class="bar bar-header stevens-primary-header center-text fix buttons">
+      <button class="button button-outline button-light" ng-click="closeModal()">Cancel</button>
 		  <h1 class="title">Add Item</h1>
 		</ion-header-bar>
 
     <ion-content>
-      <div class = "radio">
-    	  <ion-radio ng-model="choice">Lost</ion-radio>
+      <div class="row">
+        <div class="col">
+          <div class = "button-bar button-block">
+        	  <ion-radio class = "button button-bar button-small" ng-model="choice">Lost</ion-radio>
+            <ion-radio class = "center-text button button-bar button-small" ng-model="choice">Found</ion-radio>
+          </div>
+        </div>
       </div>
-      <div class = "radio">
-        <ion-radio ng-model="choice">Found</ion-radio>
-      </div>
-      <div class="add"><i class="icon ion-upload"></i>
-      	<div class="instructions">Upload Photo</div>
-      </div>
+
+        <div class="horizontal-image add center-text"><button class="button button-icon icon ion-upload"></button>
+          <div class="instructions">Upload Photo</div>
+        </div>
+
+          <label class="item item-input large">
+          	<input type="text" placeholder="Item Name"></input>
+          </label>
       <label class="item item-input large">
-      	<input type="text" placeholder="Title">
+        <input type="date"></input>
       </label>
       <label class="item item-input large">
-        <input type="text" placeholder="Description">
+        <input type="text" placeholder="Location"></input>
       </label>
-      <label class="item item-input large">
-        <input type="date">
+      <label class="item item-input text">
+        <textarea type="text" placeholder="Description" rows="5"></textarea>
       </label>
-      <label class="item item-input large">
-        <input type="text" placeholder="Location">
-      </label>
+     <!-- <button class="button button-block">Confirm</button>-->
   	</ion-content>
   </form>
 </ion-modal-view>
