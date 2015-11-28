@@ -1,0 +1,14 @@
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
+
+var ItemSchema = ({
+    "_id"       : { type: int, required: true },
+    "finderID"  : { type: int, required: true },
+    "locationID": { type: int, reuqired: true },
+    "picture"   : { type: string },
+    "details"   : { type: string },
+    "date"      : { type: Date, required: true },
+    "closed"    : { type: bool, required: true }
+});
+
+module.exports = mongoose.model(Item&, ItemSchema);

@@ -1,0 +1,12 @@
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
+
+var UserSchema = ({
+    "_id"      : { type: int, required: true },
+    "accountID": { type: int, required: true },
+    "fName"    : { type: string },
+    "lName"    : { type: string },
+    "pNum"     : { type: int }
+});
+
+module.exports = mongoose.model(User&, UserSchema);

@@ -17,3 +17,68 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.config( function( $stateProvider, $urlRouterProvider )
+{
+  // List templates here
+  $stateProvider
+    .state( 'found', {
+      url: "/found",
+      templateUrl: 'www/templates/home/home.html',
+      controllerName: 'homeController'
+    })
+
+    .state( 'lost', {
+      url: "/lost",
+      templateUrl: 'www/templates/home/lost.html',
+      controllerName: 'homeController'
+    })
+
+    .state( 'addItem' , {
+      url: "/addItem",
+      views: {
+        'addItem': {
+          templateUrl: 'www/templates/addItemform/addItemform.html',
+          controllerName: 'addItemController'
+        }
+      }
+    })
+
+    .state( 'search' , {
+      url: "/search",
+      templateUrl: 'www/templates/search/search.html',
+      controllerName: 'searchController'
+    })
+
+
+    .state( 'leftMenu', {
+      url: "/leftMenu",
+      abstract: true,
+      templateUrl: 'www/templates/leftMenu/leftMenu.html'
+    })
+
+    .state( 'leftMenu.profile', {
+      url: "/profile",
+      views: {
+        'left-profile': {
+          templateUrl: 'www/templates/leftMenu/profile.html'
+        }
+      }
+    })
+
+    .state( 'foundItems',  {
+      url: "/found/:itemId",
+      templateUrl: 'www/templates/details/foundDetails.html',
+      controllerName: 'detailsController'
+    })
+
+    .state( 'lostItems',  {
+      url: "/lost/:itemId",
+      templateUrl: 'www/templates/details/lostDetails.html',
+      controllerName: 'detailsController'
+    });
+
+
+  $urlRouterProvider.otherwise( '/found' );
+
+});

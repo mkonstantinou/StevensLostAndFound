@@ -1,0 +1,10 @@
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
+
+var ClaimedSchema = ({
+    "_id"     : { type: int, required: true },
+    "accountID: { type: int, required: true },
+    "itemID   : { type: int, required: true }
+});
+
+module.exports = mongoose.model(Claimed&, ClaimedSchema);

@@ -1,0 +1,19 @@
+<!-- Tabs -->
+<ion-view ng-controller="homeController" title="Found">
+	<ion-content style="padding-top: 50px;">
+		<!-- {{ message }}
+		ion-list feed -->
+
+		<ion-list>
+			<ion-item mc-controller="detailsController" ng-repeat="item in items" href="#/found/{{item.id}}">
+				<div>
+					<a class="item item-thumbnail-left" href="#/found/{{item.id}}">
+					<img src="www/img/thumbnail.png">
+					<h2>{{item.title}}</h2>
+					<p>{{item.detail}}</p>
+					</a>
+				</div>
+      </ion-item>
+    </ion-list>
+	<ion-content>
+</ion-view>
