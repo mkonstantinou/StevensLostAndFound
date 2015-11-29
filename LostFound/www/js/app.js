@@ -17,21 +17,79 @@ angular.module('starter', ['ionic'])
     }
   });
 })
-.config( function( $stateProvider, $urlRouterProvider ) 
+
+.config( function( $stateProvider, $urlRouterProvider )
 {
   // List templates here
   $stateProvider
-    .state( 'home', {
-      url: "/",
+    .state( 'found', {
+      url: "/found",
       templateUrl: 'www/templates/home/home.html',
       controllerName: 'homeController'
     })
-    .state('addItem' , {
+
+    .state( 'lost', {
+      url: "/lost",
+      templateUrl: 'www/templates/home/lost.html',
+      controllerName: 'homeController'
+    })
+
+    .state( 'addItem' , {
       url: "/addItem",
-      templateUrl: 'www/templates/addItemform/addItemform.html',
-      controllerName: 'addItemController'
+      views: {
+<<<<<<< HEAD
+        addItem: {
+          templateUrl: 'www/templates/addItemform/addItemform.html',
+          controllerName: 'addItemController'
+        }
+      }
+=======
+        'addItem': {
+          templateUrl: 'www/templates/addItemform/addItemform.html',
+          controllerName: 'addItemController'
+        }
+      }
+    })
+
+    .state( 'search' , {
+      url: "/search",
+      templateUrl: 'www/templates/search/search.html',
+      controllerName: 'searchController'
+<<<<<<< HEAD
+    })
+
+
+    .state( 'leftMenu', {
+      url: "/leftMenu",
+      abstract: true,
+      templateUrl: 'www/templates/leftMenu/leftMenu.html'
+    })
+
+    .state( 'leftMenu.profile', {
+      url: "/profile",
+      views: {
+        'left-profile': {
+          templateUrl: 'www/templates/leftMenu/profile.html'
+        }
+      }
+    })
+
+    .state( 'foundItems',  {
+      url: "/found/:itemId",
+      templateUrl: 'www/templates/details/foundDetails.html',
+      controllerName: 'detailsController'
+    })
+
+    .state( 'lostItems',  {
+      url: "/lost/:itemId",
+      templateUrl: 'www/templates/details/lostDetails.html',
+      controllerName: 'detailsController'
+=======
+>>>>>>> 38ac42f5aa594f0a37eafc1ae81a00417debb6af
+>>>>>>> 449694edcbbac4c649cdaf6a9bbed04f4537c4b1
     });
-  
-  $urlRouterProvider.otherwise( '/' );
-   
+
+
+  $urlRouterProvider.otherwise( '/found' );
+
 });
