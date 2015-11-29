@@ -1,7 +1,6 @@
 angular.module( 'starter' )
 	.controller( 'appController', function ( $scope, $location, $ionicSideMenuDelegate ) 
 	{
-
 		$scope.showtitle = true;
 		$scope.showsearch = false;
 		
