@@ -12,21 +12,25 @@
       <div class = "radio">
         <ion-radio ng-model="choice">Found</ion-radio>
       </div>
-      <div class="add"><i class="icon ion-upload"></i>
-      	<div class="instructions">Upload Photo</div>
+      <div class="add">
+      	<div class="instructions"> <i class="icon ion-upload"></i> Upload Photo</div>
       </div>
       <label class="item item-input large">
-      	<input type="text" placeholder="Title">
+      	<input type="text" name="title" data-ng-model="title" placeholder="Title">
       </label>
       <label class="item item-input large">
-        <input type="text" placeholder="Description">
+        <input type="text" name="description" data-ng-model="description" placeholder="Description">
       </label>
       <label class="item item-input large">
-        <input type="date">
+        <input type="date" name="date" data-ng-model="date" >
       </label>
       <label class="item item-input large">
-        <input type="text" placeholder="Location">
+        <input type="text" name="location" data-ng-model="location" placeholder="Location">
       </label>
   	</ion-content>
+    
+    <button class="bar bar-footer bar-positive" type="submit" data-ng-click="submit(addItem)"  style="display:flex;justify-content:center;align-items:center;">
+      <div class="button button-clear" style="text-align: center">Submit</div>
+    </button>
   </form>
 </ion-modal-view>
