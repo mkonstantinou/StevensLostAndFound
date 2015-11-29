@@ -1,0 +1,26 @@
+<!-- Tabs -->
+<ion-view ng-controller="searchController" title="Home">
+	<ion-content style="padding-top: 50px;">
+		<!-- {{ message }}
+		ion-list feed -->
+
+		<ion-list>
+      <ion-item ng-repeat="item in list" href="#">
+				<div>
+					<a class="item item-thumbnail-left" href="#">
+						<img src="www/img/thumbnail.png">
+						<h2>{{item.title}}</h2>
+						<p>{{item.detail}}</p>
+					</a>
+				</div>
+      </ion-item>
+    </ion-list>
+		<!-- <div class="list" >
+				<a class="item item-thumbnail-left" href="#">
+					<img src="www/img/thumbnail.png">
+					<h2>Pretty Hate Machine</h2>
+					<p>Nine Inch Nails</p>
+				</a>
+			</div> -->
+	</ion-content>
+</ion-view>
