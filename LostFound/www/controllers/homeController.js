@@ -31,6 +31,9 @@ angular.module( 'starter' )
     get: function(itemId) {
       // Simple index lookup
       return items[itemId];
+    },
+    push: function(item) {
+      return items.push(item);
     }
   }
 })
