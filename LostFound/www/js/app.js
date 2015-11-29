@@ -37,13 +37,6 @@ angular.module('starter', ['ionic'])
     .state( 'addItem' , {
       url: "/addItem",
       views: {
-<<<<<<< HEAD
-        addItem: {
-          templateUrl: 'www/templates/addItemform/addItemform.html',
-          controllerName: 'addItemController'
-        }
-      }
-=======
         'addItem': {
           templateUrl: 'www/templates/addItemform/addItemform.html',
           controllerName: 'addItemController'
@@ -55,7 +48,6 @@ angular.module('starter', ['ionic'])
       url: "/search",
       templateUrl: 'www/templates/search/search.html',
       controllerName: 'searchController'
-<<<<<<< HEAD
     })
 
 
@@ -84,9 +76,6 @@ angular.module('starter', ['ionic'])
       url: "/lost/:itemId",
       templateUrl: 'www/templates/details/lostDetails.html',
       controllerName: 'detailsController'
-=======
->>>>>>> 38ac42f5aa594f0a37eafc1ae81a00417debb6af
->>>>>>> 449694edcbbac4c649cdaf6a9bbed04f4537c4b1
     });
 
 
