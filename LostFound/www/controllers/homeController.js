@@ -37,7 +37,7 @@ angular.module( 'starter' )
 	.controller( 'homeController', function ( $scope, Items ) 
 	{
 		$scope.items = Items.all();
-    });
+  });
 	
 
 
