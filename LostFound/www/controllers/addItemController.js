@@ -35,10 +35,9 @@ angular.module( 'starter' )
 				detail:form["description"].$modelValue,
 				image: 'www/img/thumbnail.png'
 			};
-			
+			$scope.modal.hide();
 			Items.push(item);
 			form.reset();
-			$scope.closeModal();
 		};
 
 		function validate(form)
