@@ -50,14 +50,6 @@ angular.module('starter', ['ionic'])
       controllerName: 'searchController'
     })
 
-
-    /* .state( 'leftMenu', {
-      abstract: true,
-      cache: false,
-      url: "/leftMenu",
-      templateUrl: 'www/templates/leftMenu/leftMenu.html'
-    }) */
-
     .state( 'profile', {
       url: "/profile",
       templateUrl: 'www/templates/profile/profile.html',
@@ -66,8 +58,7 @@ angular.module('starter', ['ionic'])
 
     .state( 'settings', {
       url: "/settings",
-      templateUrl: 'www/templates/leftMenu/settings.html',
-      controllerName: 'profileController'
+      templateUrl: 'www/templates/leftMenu/settings.html'
     })
 
     .state( 'foundItems',  {

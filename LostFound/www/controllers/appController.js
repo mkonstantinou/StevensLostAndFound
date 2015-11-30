@@ -19,7 +19,7 @@ angular.module( 'starter' )
 			},
 			{
 				title: 'Settings',
-				action: 'settings'
+				action: '../settings'
 			}
 		];
 
