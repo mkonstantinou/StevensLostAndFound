@@ -7,7 +7,7 @@ angular.module( 'starter' )
 		$scope.items = [
 			{
 				title: 'Profile',
-				action: 'profile'
+				action: '../profile'
 			},
 			{
 				title: 'Your posts',
