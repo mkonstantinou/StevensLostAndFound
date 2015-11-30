@@ -54,3 +54,11 @@ ion-radio
 {
   display:inline;
 }
+
+img {
+ width: 80%; 
+}
+
+ion-content {
+  bottom: 75px!important;
+}
