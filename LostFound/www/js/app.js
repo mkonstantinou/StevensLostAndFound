@@ -54,7 +54,7 @@ angular.module('starter', ['ionic'])
     .state( 'leftMenu', {
       url: "/leftMenu",
       abstract: false,
-      templateUrl: 'www/templates/leftMenu/leftMenu.html'
+      templateUrl: 'www/templates/leftMenu/settings.html'
     })
 
     .state( 'leftMenu.profile', {
@@ -62,6 +62,15 @@ angular.module('starter', ['ionic'])
       views: {
         'left-profile': {
           templateUrl: 'www/templates/leftMenu/profile.html'
+        }
+      }
+    })
+  
+   .state( 'leftMenu.settings', {
+      url: "/settings",
+      views: {
+        'left-profile': {
+          templateUrl: 'www/templates/leftMenu/settings.html'
         }
       }
     })
