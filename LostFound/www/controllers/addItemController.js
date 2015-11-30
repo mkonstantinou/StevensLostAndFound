@@ -2,37 +2,28 @@ angular.module( 'starter' )
 	.controller('addItemController', function($scope, $ionicModal, Items )
 	{
 		$scope.hideFab = false;
-	  $ionicModal.fromTemplateUrl('www/templates/addItemform/addItemform.html',
-	  {
-	    scope: $scope,
-	    animation: 'slide-in-up',
-	    backdrop: 'static',
-	    keyboard: false
+		$ionicModal.fromTemplateUrl('www/templates/addItemform/addItemform.html',
+		{
+			scope: $scope,
+			animation: 'slide-in-up'
 
-	  }).then(function(modal)
-	  {
-	    $scope.modal = modal;
-	  });
+		}).then(function(modal)
+		{
+			$scope.modal = modal;
+		});
 
-	  $scope.openModal = function()
-	  {
-	    $scope.modal.show();
+		$scope.openModal = function()
+		{
+			$scope.modal.show();
 			$scope.hideFab = true;
-	  };
+		};
 
-	  $scope.closeModal = function()
-	  {
-	    $scope.modal.hide();
-		$scope.hideFab = false;
-	  };
-	  
-	  //Cleanup the modal when we're done with it!
-	  $scope.$on('$destroy', function()
-	  {
-	    $scope.modal.remove();
-	    $scope.hideFab = false;
-	  });
-		
+		$scope.closeModal = function()
+		{
+			$scope.modal.hide();
+			$scope.hideFab = false;
+		};
+
 		$scope.submit = function(form)
 		{
 			if (!validate(form))
@@ -47,7 +38,7 @@ angular.module( 'starter' )
 			
 			Items.push(item);
 			form.reset();
-			$scope.closeModal();
+			$scope.modal.hide();
 			$scope.hideFab = false;
 		};
 
@@ -63,5 +54,11 @@ angular.module( 'starter' )
 				return false;
 			
 			return true;
-		}
+		};
+		//Cleanup the modal when we're done with it!
+		$scope.$on('$destroy', function()
+		{
+		$scope.modal.remove();
+		$scope.hideFab = false;
+		});
 	});

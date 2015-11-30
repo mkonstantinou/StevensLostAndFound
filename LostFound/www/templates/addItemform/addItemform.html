@@ -1,4 +1,4 @@
-<ion-modal-view title="Add Item">
+ <ion-modal-view title="Add Item" >
    <form name="addItem" novalidate>
       <ion-header-bar class="bar fix-buttons stevens-primary-header">
         <a class="button button-outline button-light button-large" ng-click="closeModal()">Cancel</a>
@@ -13,11 +13,14 @@
             <label class="item item-input">
               <input type="text"  name="title" data-ng-model="title" placeholder="Item Name">
             </label>
-          <div style="text-align:center">
+            <div style="display:flex;justify-content:center;align-items:center;">
+                <img src ="www/img/thumbnail.png"></div>
+            <div style="text-align:center">
             <button class = "button button-clear button-dark">
               <i class="icon ion-upload"></i>Tap to upload photo
             </button>
           </div>
+        </div> 
             <label class="item item-input">
               <input type="text" name="location" data-ng-model="location" placeholder="Location">
             </label>
@@ -36,4 +39,4 @@
             </h1>
         </button>
     </form>
-  </ion-modal-view>
+</ion-modal-view>
