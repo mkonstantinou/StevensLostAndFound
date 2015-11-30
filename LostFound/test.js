@@ -1,18 +1,18 @@
 // JavaScript Document
 var mongoose = require('mongoose');
-
+//var Schema=mongoose.Schema;
 //Lets connect to our database using the DB server URL.
 mongoose.connect('mongodb://localhost/lostfound');
 
 //var User = mongoose.model('User', {name: String, roles: Array, age: Number});
 
-var Account =  mongoose.model(Account, {
+var Account =  mongoose.model('Account', {
 		"_id"     : { type: Number, required: true },
 		"email"   : { type: String, required: true, index: { unique: true } },
 		"password": { type: String, required: true }
 	});
 
-var Claimed = mongoose.model(Claimed, {
+var Claimed = mongoose.model('Claimed', {
 		"_id"     : { type: Number, required: true },
 		"accountID": { type: Number, required: true },
 		"itemID"   : { type: Number, required: true }
@@ -20,7 +20,7 @@ var Claimed = mongoose.model(Claimed, {
 
 	//module.exports = mongoose.model(Claimed&, ClaimedSchema);
 	
-	var Item = mongoose.model(Item, {
+	var Item = mongoose.model('Item', {
 		"_id"       : { type: Number, required: true },
 		"finderID"  : { type: Number, required: true },
 		"locationID": { type: Number, reuqired: true },
@@ -30,9 +30,9 @@ var Claimed = mongoose.model(Claimed, {
 		"closed"    : { type: Boolean, required: true }
 	});
 
-	//module.exports = mongoose.model(Item&, ItemSchema);
+	//module.exports = mongoose.model('Item', ItemSchema);
 	
-	var Location = mongoose.model(Location, {
+	var Location = mongoose.model('Location', {
 		"_id"    : { type: Number, required: true },
 		"address": { type: Number, required: true },
 		"street" : { type: String, required: true }
@@ -40,7 +40,7 @@ var Claimed = mongoose.model(Claimed, {
 
 	//module.exports = mongoose.model(Location&, LocationSchema);
 	
-	var User = mongoose.model(User, {
+	var User = mongoose.model('User', {
 		"_id"      : { type: Number, required: true },
 		"accountID": { type: Number, required: true },
 		"fName"    : { type: String },
@@ -70,3 +70,4 @@ var Claimed = mongoose.model(Claimed, {
     console.log('saved successfully:', userObj);
   }
 });*/
+//mongoose.connection.close();
