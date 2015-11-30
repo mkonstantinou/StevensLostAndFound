@@ -50,29 +50,14 @@ angular.module('starter', ['ionic'])
       controllerName: 'searchController'
     })
 
-
-    .state( 'leftMenu', {
-      url: "/leftMenu",
-      abstract: false,
-      templateUrl: 'www/templates/leftMenu/settings.html'
-    })
-
-    .state( 'leftMenu.profile', {
+    .state( 'profile', {
       url: "/profile",
-      views: {
-        'left-profile': {
-          templateUrl: 'www/templates/leftMenu/profile.html'
-        }
-      }
+      templateUrl: 'www/templates/leftMenu/profile.html'
     })
-  
-   .state( 'leftMenu.settings', {
+
+    .state( 'settings', {
       url: "/settings",
-      views: {
-        'left-profile': {
-          templateUrl: 'www/templates/leftMenu/settings.html'
-        }
-      }
+      templateUrl: 'www/templates/leftMenu/settings.html'
     })
 
     .state( 'foundItems',  {
