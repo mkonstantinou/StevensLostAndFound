@@ -25,6 +25,7 @@
     <script src="www/controllers/searchController.js"></script>
     <script src="www/controllers/addItemController.js"></script>
     <script src="www/controllers/detailsController.js"></script>
+    <script src="www/controllers/profileController.js"></script>
   </head>
   <body ng-app="starter">
 
@@ -40,7 +41,7 @@
             </ion-header-bar>
             <ion-content>
               <ion-list>
-                <ion-item ng-repeat="item in items" href="#/leftMenu/{{ item.action }}">
+                <ion-item menu-close ng-repeat="item in items" href="#/leftMenu/{{ item.action }}">
                   <h2>{{ item.title }}</h2>
                 </ion-item>
               </ion-list>
