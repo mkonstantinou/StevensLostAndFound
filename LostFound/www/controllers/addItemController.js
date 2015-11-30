@@ -1,14 +1,14 @@
 angular.module( 'starter' )
-	.controller('addItemController', function($scope, $ionicModal)
+	.controller('addItemController', function($scope, $ionicModal, Items )
 	{
-<<<<<<< HEAD
-	  $ionicModal.fromTemplateUrl('addItemform.html', 
-=======
+		$scope.hideFab = false;
 	  $ionicModal.fromTemplateUrl('www/templates/addItemform/addItemform.html',
->>>>>>> 38ac42f5aa594f0a37eafc1ae81a00417debb6af
 	  {
 	    scope: $scope,
-	    animation: 'slide-in-up'
+	    animation: 'slide-in-up',
+	    backdrop: 'static',
+	    keyboard: false
+
 	  }).then(function(modal)
 	  {
 	    $scope.modal = modal;
@@ -17,17 +17,51 @@ angular.module( 'starter' )
 	  $scope.openModal = function()
 	  {
 	    $scope.modal.show();
+			$scope.hideFab = true;
 	  };
 
 	  $scope.closeModal = function()
 	  {
 	    $scope.modal.hide();
+		$scope.hideFab = false;
 	  };
-
+	  
 	  //Cleanup the modal when we're done with it!
 	  $scope.$on('$destroy', function()
 	  {
 	    $scope.modal.remove();
+	    $scope.hideFab = false;
 	  });
+		
+		$scope.submit = function(form)
+		{
+			if (!validate(form))
+				return;
+			
+			var item = {
+				id:1,
+				title:form["title"].$modelValue ,
+				detail:form["description"].$modelValue,
+				image: 'www/img/thumbnail.png'
+			};
+			
+			Items.push(item);
+			form.reset();
+			$scope.closeModal();
+			$scope.hideFab = false;
+		};
 
+		function validate(form)
+		{
+			if (form == null)
+				return false;
+			if (!form["title"].$modelValue)
+				return false;
+			if (!form["description"].$modelValue)
+				return false;
+			if (!form["date"].$modelValue)
+				return false;
+			
+			return true;
+		}
 	});

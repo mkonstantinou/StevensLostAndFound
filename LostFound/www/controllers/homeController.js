@@ -31,13 +31,16 @@ angular.module( 'starter' )
     get: function(itemId) {
       // Simple index lookup
       return items[itemId];
+    },
+    push: function(item) {
+      return items.push(item);
     }
   }
 })
 	.controller( 'homeController', function ( $scope, Items ) 
 	{
 		$scope.items = Items.all();
-    });
+  });
 	
 
 

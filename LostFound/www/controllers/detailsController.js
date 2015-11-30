@@ -1,5 +1,6 @@
 angular.module( 'starter' )
 	
 	.controller( 'detailsController', function( $scope, $stateParams, Items ) {
-  		$scope.item = Items.get($stateParams.itemId);
+		$scope.param = $stateParams.itemId;
+  		$scope.item = Items.get($stateParams.itemId-1);
 	});

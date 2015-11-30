@@ -16,19 +16,23 @@
 }
 
 /* Floating Action Button*/
-.float-button .ion-android-add-circle  {
+.float-button .ion-android-add  {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  width: 30px;
-  padding: 30px;
+  width: 70px;
+  height: 70px;
+  /*padding: 75px;*/
   font-size: 90px;
-  background: $warning;
+  /*background: blue;*/
   position: fixed;
   bottom: 20px; /* Adjust to where you want it */
-  right: 20px; /* Adjust to where you want it */
-  z-index: 9999;
-  color: #A32638;
+  right: 10px; /* Adjust to where you want it */
+  z-index: 99999;
+  color: white;
+  -webkit-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
+  -moz-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
+  box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
 }
 
 .float-button .height_fix {
