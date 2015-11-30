@@ -1,5 +1,5 @@
- <ion-modal-view title="Add Item" >
-   <form name="addItem" novalidate>
+ <ion-modal-view title="Add Item" data-ng-submit="submit(addItem)" >
+   <form name="addItem" >
       <ion-header-bar class="bar fix-buttons stevens-primary-header">
         <a class="button button-outline button-light button-large" ng-click="closeModal()">Cancel</a>
         <h1 class="title">Add Item</h1>
@@ -32,7 +32,7 @@
             </label>
         </div>
       </ion-content>
-      <button class = "bar bar-footer stevens-primary-header white" type="submit" data-ng-click="submit(addItem)" >
+      <button class = "bar bar-footer stevens-primary-header white" type="submit" >
             <h1 class="title">
               <i class="icon ion-checkmark"></i>
               Confirm

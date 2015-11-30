@@ -24,6 +24,11 @@ angular.module( 'starter' )
 			$scope.hideFab = false;
 		};
 
+		$scope.$on('$destroy', function()
+		{
+			$scope.modal.remove();
+			$scope.hideFab = false;
+		});
 		$scope.submit = function(form)
 		{
 			if (!validate(form))
@@ -35,7 +40,7 @@ angular.module( 'starter' )
 				detail:form["description"].$modelValue,
 				image: 'www/img/thumbnail.png'
 			};
-			$scope.modal.hide();
+			$scope.closeModal();
 			Items.push(item);
 			form.reset();
 		};
@@ -54,9 +59,4 @@ angular.module( 'starter' )
 			return true;
 		};
 		//Cleanup the modal when we're done with it!
-		$scope.$on('$destroy', function()
-		{
-		$scope.modal.remove();
-		$scope.hideFab = false;
-		});
 	});
