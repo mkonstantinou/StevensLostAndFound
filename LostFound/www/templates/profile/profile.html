@@ -1,0 +1,25 @@
+<ion-view ng-controller="detailsController" title="{{item.title}}" style="padding-top: 50px;">
+   <ion-content>
+      <div class="row">
+        <div class="col">
+          <h1 style = "padding-top: 75px; text-align: center;">{{ user.name }}</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" style="display:flex;justify-content:center;align-items:center;">
+          <img src="{{ user.image }}">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3>
+            {{ user.detail }}
+          </h3>
+        </div>
+      </div>
+   </ion-content>
+
+   <button class="bar bar-footer stevens-primary-header" style="display:flex;justify-content:center;align-items:center;">
+    <div class="button button-clear" style="text-align: center">Contact</div>
+   </button>
+</ion-view>
