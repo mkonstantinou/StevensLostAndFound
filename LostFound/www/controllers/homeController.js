@@ -6,21 +6,21 @@ angular.module( 'starter' )
   var items = [
    {
       id:1,
-      title:'Item 1',
-      detail:'Detail 1',
-      image: 'www/img/thumbnail.png'
+      title:'Samsung Galaxy S6',
+      detail:'Has a green flip cover, Lost in Burchard 118',
+      image: 'www/img/s6.jpg'
       },
         {
           id: 2,
-      title:'Item 2',
-      detail:'Detail 2',
-      image: 'www/img/thumbnail.png'
+      title:'Water Bottle',
+      detail:'Gray with a black strap',
+      image: 'www/img/waterbottle.jpg'
       },
         {
           id:3,
-      title:'Item 3',
-      detail:'Detail 3',
-      image: 'www/img/thumbnail.png'
+      title:'Keys',
+      detail:'Contains two gold keys, a gray tag, a blue tag that says "Too cool for traditional manufacturing," and a gray flash drive',
+      image: 'www/img/keys.jpg'
       }
   ];
 
