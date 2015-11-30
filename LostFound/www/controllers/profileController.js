@@ -1,6 +1,6 @@
 angular.module( 'starter' )
 
-	.controller( 'detailsController', function( $scope, $stateParams, Items ) {
+	.controller( 'profileController', function( $scope, $stateParams, Items ) {
 		$scope.param = $stateParams.itemId;
   	$scope.user = {
 			name : "Matthew Konstantinou",

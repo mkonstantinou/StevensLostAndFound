@@ -60,7 +60,8 @@ angular.module('starter', ['ionic'])
 
     .state( 'profile', {
       url: "/profile",
-      templateUrl: 'www/templates/leftMenu/profile.html'
+      templateUrl: 'www/templates/profile/profile.html',
+      controllerName: 'profileController'
     })
 
     .state( 'settings', {
