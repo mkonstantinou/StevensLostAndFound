@@ -51,19 +51,21 @@ angular.module('starter', ['ionic'])
     })
 
 
-    .state( 'leftMenu', {
+    /* .state( 'leftMenu', {
+      abstract: true,
+      cache: false,
       url: "/leftMenu",
-      abstract: false,
       templateUrl: 'www/templates/leftMenu/leftMenu.html'
+    }) */
+
+    .state( 'profile', {
+      url: "/profile",
+      templateUrl: 'www/templates/leftMenu/profile.html'
     })
 
-    .state( 'leftMenu.profile', {
-      url: "/profile",
-      views: {
-        'left-profile': {
-          templateUrl: 'www/templates/leftMenu/profile.html'
-        }
-      }
+    .state( 'settings', {
+      url: "/settings",
+      templateUrl: 'www/templates/leftMenu/settings.html'
     })
 
     .state( 'foundItems',  {

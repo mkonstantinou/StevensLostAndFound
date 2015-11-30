@@ -40,7 +40,7 @@
             </ion-header-bar>
             <ion-content>
               <ion-list>
-                <ion-item ng-repeat="item in items" href="#/leftMenu/{{ item.action }}">
+                <ion-item ng-repeat="item in items" ng-click="{{ item.action }}()">
                   <h2>{{ item.title }}</h2>
                 </ion-item>
               </ion-list>

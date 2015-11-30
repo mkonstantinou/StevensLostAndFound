@@ -27,6 +27,11 @@ angular.module( 'starter' )
 			$ionicSideMenuDelegate.toggleLeft();
 		};
 
+		$scope.profile = function( ) {
+			$location.path("profile");
+			$ionicSideMenuDelegate.toggleLeft();
+		};
+
 		$scope.search = function( ) {
 			if ( $scope.showsearch )
 			{
