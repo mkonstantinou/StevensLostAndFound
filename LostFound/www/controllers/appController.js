@@ -7,7 +7,7 @@ angular.module( 'starter' )
 		$scope.items = [
 			{
 				title: 'Profile',
-				action: 'profile'
+				action: '../profile'
 			},
 			{
 				title: 'Your posts',
@@ -24,11 +24,6 @@ angular.module( 'starter' )
 		];
 
 		$scope.toggleLeft = function( ) {
-			$ionicSideMenuDelegate.toggleLeft();
-		};
-
-		$scope.profile = function( ) {
-			$location.path("profile");
 			$ionicSideMenuDelegate.toggleLeft();
 		};
 

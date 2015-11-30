@@ -66,6 +66,7 @@ angular.module('starter', ['ionic'])
     .state( 'settings', {
       url: "/settings",
       templateUrl: 'www/templates/leftMenu/settings.html'
+      controllerName: 'profileController'
     })
 
     .state( 'foundItems',  {
