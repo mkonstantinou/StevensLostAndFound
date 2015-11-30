@@ -5,7 +5,10 @@ angular.module( 'starter' )
 	  $ionicModal.fromTemplateUrl('www/templates/addItemform/addItemform.html',
 	  {
 	    scope: $scope,
-	    animation: 'slide-in-up'
+	    animation: 'slide-in-up',
+	    backdrop: 'static',
+	    keyboard: false
+
 	  }).then(function(modal)
 	  {
 	    $scope.modal = modal;
@@ -20,13 +23,14 @@ angular.module( 'starter' )
 	  $scope.closeModal = function()
 	  {
 	    $scope.modal.hide();
-			$scope.hideFab = false;
+		$scope.hideFab = false;
 	  };
-
+	  
 	  //Cleanup the modal when we're done with it!
 	  $scope.$on('$destroy', function()
 	  {
 	    $scope.modal.remove();
+	    $scope.hideFab = false;
 	  });
 		
 		$scope.submit = function(form)
@@ -44,6 +48,7 @@ angular.module( 'starter' )
 			Items.push(item);
 			form.reset();
 			$scope.closeModal();
+			$scope.hideFab = false;
 		};
 
 		function validate(form)
@@ -59,5 +64,4 @@ angular.module( 'starter' )
 			
 			return true;
 		}
-
 	});
