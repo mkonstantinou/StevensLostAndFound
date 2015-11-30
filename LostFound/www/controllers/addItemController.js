@@ -38,8 +38,7 @@ angular.module( 'starter' )
 			
 			Items.push(item);
 			form.reset();
-			$scope.modal.hide();
-			$scope.hideFab = false;
+			$scope.closeModal();
 		};
 
 		function validate(form)
