@@ -15,6 +15,14 @@
 	color: white;
 }
 
+.modal{
+  top: 0 ;
+  bottom: 0 ; 
+  left: 0 ;
+  right: 0 ;
+  width: 100% ;
+}
+
 /* Floating Action Button*/
 .float-button .ion-android-add  {
   -webkit-border-radius: 50%;
