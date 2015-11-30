@@ -53,7 +53,7 @@ angular.module('starter', ['ionic'])
 
     .state( 'leftMenu', {
       url: "/leftMenu",
-      abstract: true,
+      abstract: false,
       templateUrl: 'www/templates/leftMenu/leftMenu.html'
     })
 

@@ -1,9 +1,9 @@
 angular.module( 'starter' )
-	.controller( 'appController', function ( $scope, $location, $ionicSideMenuDelegate ) 
+	.controller( 'appController', function ( $scope, $location, $ionicSideMenuDelegate )
 	{
-		$scope.showtitle = true;
+		$scope.showtitle = false;
 		$scope.showsearch = false;
-		
+
 		$scope.items = [
 			{
 				title: 'Profile',
@@ -22,11 +22,11 @@ angular.module( 'starter' )
 				action: 'settings'
 			}
 		];
-		
+
 		$scope.toggleLeft = function( ) {
 			$ionicSideMenuDelegate.toggleLeft();
 		};
-		
+
 		$scope.search = function( ) {
 			if ( $scope.showsearch )
 			{
@@ -38,21 +38,19 @@ angular.module( 'starter' )
 				$scope.showsearch = true;
 			}
 		};
-		
+
 		$scope.gosearch = function( ) {
 			$location.path('search');
 		};
-		
+
 		$scope.cancelsearch = function( ) {
 			$scope.showtitle = true;
 			$scope.showsearch = false;
 		};
-	
+
 	})
 	.service( 'SearchService', function( $q ) {
 		var Search = {};
 		Search.terms = [];
 		return Search;
 	} );
-
-	
