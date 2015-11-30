@@ -57,13 +57,19 @@ angular.module('starter', ['ionic'])
       templateUrl: 'www/templates/leftMenu/leftMenu.html'
     })
 
-    .state( 'leftMenu.profile', {
+    // .state( 'leftMenu.profile', {
+    //   url: "/profile",
+    //   views: {
+    //     'left-profile': {
+    //       templateUrl: 'www/templates/leftMenu/profile.html'
+    //     }
+    //   }
+    // })
+    
+    .state( 'profile', {
       url: "/profile",
-      views: {
-        'left-profile': {
-          templateUrl: 'www/templates/leftMenu/profile.html'
-        }
-      }
+      templateUrl: 'www/templates/profile/profile.html',
+      controllerName: 'profileController'
     })
 
     .state( 'foundItems',  {
