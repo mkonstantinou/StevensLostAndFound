@@ -1,10 +1,10 @@
 angular.module( 'starter' )
 	.controller( 'appController', function ( $scope, $location, $ionicSideMenuDelegate, $ionicHistory )
 	{
-		var backTitles = [];
 		$scope.showBack = false;
 		$scope.showsearch = false;
 		$scope.showTabs = true;
+		$scope.backButton = "";
 
 		$scope.items = [
 			{
@@ -30,23 +30,17 @@ angular.module( 'starter' )
 		};
 
 		$scope.returnBack = function( ) {
-			$ionicHistory.goBack();
-			var back = $ionicHistory.backView();
-			if( back.stateId == "found" || back.stateId == "lost" )
-			{
-				$scope.showBack = false;
-				$scope.showTabs = true;
-				backTitles.pop();
-			}
-			else
-			{
-				setBackButtonText( backTitles[backTitles.length-2] );
-				backTitles.pop();
-			}
+			$scope.showBack = false;
+			$scope.showTabs = true;
+			window.location.href = "#/" + $scope.backButton;
+			$scope.backButton = "";
 		};
 
-		setBackButtonText = function( text ) {
-			document.getElementById("backButton").innerHTML = text;
+		setBackButton = function( ) {
+			if( $scope.backButton == "" )
+			{
+				$scope.backButton = $ionicHistory.currentView().stateId;
+			}
 		};
 
 		$scope.search = function( ) {
@@ -55,8 +49,7 @@ angular.module( 'starter' )
 				window.location.href = "#/search";
 				$scope.showBack = true;
 				$scope.showTabs = false;
-				backTitles.push( $ionicHistory.currentView().title );
-				setBackButtonText( backTitles[backTitles.length-1] );
+				setBackButton();
 			}
 			else
 			{
@@ -68,24 +61,21 @@ angular.module( 'starter' )
 			$scope.showBack = true;
 			$scope.showTabs = false;
 			window.location.href = "#/profile";
-			backTitles.push( $ionicHistory.currentView().title );
-			setBackButtonText( backTitles[backTitles.length-1] );
+			setBackButton();
 		};
 
 		$scope.foundDetails = function( id ) {
 			$scope.showBack = true;
 			$scope.showTabs = false;
 			window.location.href = "#/found/"+id;
-			backTitles.push( $ionicHistory.currentView().title );
-			setBackButtonText( backTitles[backTitles.length-1] );
+			setBackButton();
 		};
 
 		$scope.lostDetails = function( id ) {
 			$scope.showBack = true;
 			$scope.showTabs = false;
 			window.location.href = "#/lost/"+id;
-			backTitles.push( $ionicHistory.currentView().title );
-			setBackButtonText( backTitles[backTitles.length-1] );
+			setBackButton();
 		};
 
 		$scope.gosearch = function( ) {

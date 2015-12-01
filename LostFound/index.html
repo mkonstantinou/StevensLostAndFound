@@ -51,8 +51,8 @@
             <ion-nav-bar>
               <ion-nav-buttons side="left">
                 <button class="button button-icon icon ion-navicon" style="color: white;" ng-click="toggleLeft()"></button>
-                <button ng-show="showBack" class="button button-icon icon ion-ios-arrow-back" id="backButton" ng-click="returnBack()"
-                  style="color: white; text-transform: capitalize;"></button>
+                <button ng-show="showBack" class="button button-icon icon ion-ios-arrow-back" ng-click="returnBack()"
+                  style="color: white; text-transform: capitalize;">{{ backButton }}</button>
               </ion-nav-buttons>
               <ion-nav-buttons side="right">
                 <div class="item-input-inset" ng-show="showsearch">
