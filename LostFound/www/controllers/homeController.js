@@ -3,7 +3,7 @@ angular.module( 'starter' )
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var items = [
+  var foundItems = [
    {
       id:1,
       title:'Samsung Galaxy S6',
@@ -23,23 +23,52 @@ angular.module( 'starter' )
       image: 'www/img/keys.jpg'
       }
   ];
+  
+  var lostItems = [
+   {
+      id:1,
+      title:'Arms',
+      detail:'~2\'10"with a white watch and soft skin',
+      image: 'www/img/arm.jpg'
+      },
+      {
+          id: 2,
+      title:'Belt',
+      detail:'Tan leather with a silver buckle',
+      image: 'www/img/belt.jpg'
+      },
+        {
+          id:3,
+      title:'Bag',
+      detail:'Green Ralph Lauren bag with brown leather trim',
+      image: 'www/img/bag.jpg'
+      }
+  ];
 
   return {
     all: function() {
-      return items;
+      return foundItems;
+    },
+    lost: function() {
+      return lostItems;
+    },
+    found: function() {
+      return foundItems
     },
     get: function(itemId) {
       // Simple index lookup
-      return items[itemId];
+      return foundItems[itemId];
     },
     push: function(item) {
-      return items.push(item);
+      
+      return foundItems.push(item);
     }
   }
 })
 	.controller( 'homeController', function ( $scope, Items ) 
 	{
-		$scope.items = Items.all();
+		$scope.foundItems = Items.found();
+    $scope.lostItems = Items.lost();
   });
 	
 
