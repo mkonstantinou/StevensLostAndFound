@@ -7,7 +7,7 @@
 		<ion-list>
 			<ion-item mc-controller="detailsController" ng-repeat="item in items" href="#/found/{{item.id}}">
 				<div>
-					<a class="item item-thumbnail-left" href="#/found/{{item.id}}">
+					<a class="item item-thumbnail-left" ng-click="foundDetails( {{item.id}} )">
 						<img src="{{item.image}}">
 						<h2>{{item.title}}</h2>
 						<p>{{item.detail}}</p>

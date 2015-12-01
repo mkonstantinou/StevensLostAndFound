@@ -41,7 +41,7 @@
             </ion-header-bar>
             <ion-content>
               <ion-list>
-                <ion-item menu-close ng-repeat="item in items" href="#/leftMenu/{{ item.action }}">
+                <ion-item menu-close ng-repeat="item in items" ng-click="{{ item.action }}()">
                   <h2>{{ item.title }}</h2>
                 </ion-item>
               </ion-list>
@@ -51,6 +51,8 @@
             <ion-nav-bar>
               <ion-nav-buttons side="left">
                 <button class="button button-icon icon ion-navicon" style="color: white;" ng-click="toggleLeft()"></button>
+                <button ng-show="showBack" class="button button-icon icon ion-ios-arrow-back" id="backButton" ng-click="returnBack()"
+                  style="color: white; text-transform: capitalize;"></button>
               </ion-nav-buttons>
               <ion-nav-buttons side="right">
                 <div class="item-input-inset" ng-show="showsearch">
@@ -62,13 +64,12 @@
                 </div>
                 <button class="button button-icon icon ion-search" style="color: white;" ng-click="search()"></button>
               </ion-nav-buttons>
-              <ion-nav-back-button></ion-nav-back-button>
             </ion-nav-bar>
             <ion-header-bar class="bar bar-header stevens-primary-header">
 
             </ion-header-bar>
 
-            <ion-tabs class="tabs-striped tabs-top tabs-background-light tabs-color-dark"
+            <ion-tabs ng-show="showTabs" class="tabs-striped tabs-top tabs-background-light tabs-color-dark"
               style="background-color: #A32638;">
               <ion-tab title="Found" href="#/found"></ion-tab>
               <ion-tab title="Lost" href="#/lost"></ion-tab>

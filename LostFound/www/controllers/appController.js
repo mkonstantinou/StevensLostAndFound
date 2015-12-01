@@ -1,13 +1,14 @@
 angular.module( 'starter' )
-	.controller( 'appController', function ( $scope, $location, $ionicSideMenuDelegate )
+	.controller( 'appController', function ( $scope, $location, $ionicSideMenuDelegate, $ionicHistory )
 	{
-		$scope.showtitle = false;
+		$scope.showBack = false;
 		$scope.showsearch = false;
+		$scope.showTabs = true;
 
 		$scope.items = [
 			{
 				title: 'Profile',
-				action: '../profile'
+				action: 'profile'
 			},
 			{
 				title: 'Your posts',
@@ -19,7 +20,7 @@ angular.module( 'starter' )
 			},
 			{
 				title: 'Settings',
-				action: '../settings'
+				action: 'settings'
 			}
 		];
 
@@ -27,17 +28,45 @@ angular.module( 'starter' )
 			$ionicSideMenuDelegate.toggleLeft();
 		};
 
+		$scope.returnBack = function( ) {
+			if( $ionicHistory.backView().stateId == "found" || $ionicHistory.backView().stateId == "lost" )
+			{
+				$scope.showBack = false;
+				$scope.showTabs = true;
+			}
+			$ionicHistory.goBack();
+		};
+
 		$scope.search = function( ) {
 			if ( $scope.showsearch )
 			{
 				window.location.href = "#/search";
+				$scope.showBack = true;
+				$scope.showTabs = false;
 			}
 			else
 			{
-				$scope.showtitle = false;
 				$scope.showsearch = true;
 			}
 		};
+
+		$scope.profile = function( ) {
+			$scope.showBack = true;
+			$scope.showTabs = false;
+			window.location.href = "#/profile";
+		};
+
+		$scope.foundDetails = function( id ) {
+			$scope.showBack = true;
+			$scope.showTabs = false;
+			window.location.href = "#/found/"+id;
+		};
+
+		$scope.lostDetails = function( id ) {
+			$scope.showBack = true;
+			$scope.showTabs = false;
+			window.location.href = "#/lost/"+id;
+		}
 
 		$scope.gosearch = function( ) {
 			$location.path('search');
