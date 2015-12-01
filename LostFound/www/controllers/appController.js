@@ -1,6 +1,7 @@
 angular.module( 'starter' )
 	.controller( 'appController', function ( $scope, $location, $ionicSideMenuDelegate, $ionicHistory )
 	{
+		var backTitles = [];
 		$scope.showBack = false;
 		$scope.showsearch = false;
 		$scope.showTabs = true;
@@ -29,12 +30,23 @@ angular.module( 'starter' )
 		};
 
 		$scope.returnBack = function( ) {
-			if( $ionicHistory.backView().stateId == "found" || $ionicHistory.backView().stateId == "lost" )
+			$ionicHistory.goBack();
+			var back = $ionicHistory.backView();
+			if( back.stateId == "found" || back.stateId == "lost" )
 			{
 				$scope.showBack = false;
 				$scope.showTabs = true;
+				backTitles.pop();
 			}
-			$ionicHistory.goBack();
+			else
+			{
+				setBackButtonText( backTitles[backTitles.length-2] );
+				backTitles.pop();
+			}
+		};
+
+		setBackButtonText = function( text ) {
+			document.getElementById("backButton").innerHTML = text;
 		};
 
 		$scope.search = function( ) {
@@ -43,6 +55,8 @@ angular.module( 'starter' )
 				window.location.href = "#/search";
 				$scope.showBack = true;
 				$scope.showTabs = false;
+				backTitles.push( $ionicHistory.currentView().title );
+				setBackButtonText( backTitles[backTitles.length-1] );
 			}
 			else
 			{
@@ -54,19 +68,25 @@ angular.module( 'starter' )
 			$scope.showBack = true;
 			$scope.showTabs = false;
 			window.location.href = "#/profile";
+			backTitles.push( $ionicHistory.currentView().title );
+			setBackButtonText( backTitles[backTitles.length-1] );
 		};
 
 		$scope.foundDetails = function( id ) {
 			$scope.showBack = true;
 			$scope.showTabs = false;
 			window.location.href = "#/found/"+id;
+			backTitles.push( $ionicHistory.currentView().title );
+			setBackButtonText( backTitles[backTitles.length-1] );
 		};
 
 		$scope.lostDetails = function( id ) {
 			$scope.showBack = true;
 			$scope.showTabs = false;
 			window.location.href = "#/lost/"+id;
-		}
+			backTitles.push( $ionicHistory.currentView().title );
+			setBackButtonText( backTitles[backTitles.length-1] );
+		};
 
 		$scope.gosearch = function( ) {
 			$location.path('search');
