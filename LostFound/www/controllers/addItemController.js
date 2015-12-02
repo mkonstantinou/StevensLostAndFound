@@ -34,6 +34,8 @@ angular.module( 'starter' )
 			if (!validate(form))
 				return;
 			
+			var postType = form["type"].$modelValue;
+						
 			var item = {
 				id:1,
 				title:form["title"].$modelValue ,
