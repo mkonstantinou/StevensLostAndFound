@@ -37,14 +37,13 @@ angular.module( 'starter' )
 			var postType = form["type"].$modelValue;
 						
 			var item = {
-				id:1,
+				id: Items.newId(),
 				title:form["title"].$modelValue ,
 				detail:form["description"].$modelValue,
 				image: 'www/img/thumbnail.png'
 			};
 			$scope.closeModal();
 			Items.push(item, postType);
-			form.reset();
 		};
 
 		function validate(form)

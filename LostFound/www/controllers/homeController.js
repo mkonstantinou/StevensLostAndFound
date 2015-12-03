@@ -1,7 +1,8 @@
 angular.module( 'starter' )
 	.factory('Items', function() {
   // Might use a resource here that returns a JSON array
-
+  var autoid = 6;
+  
   // Some fake testing data
   var foundItems = [
    {
@@ -26,19 +27,19 @@ angular.module( 'starter' )
   
   var lostItems = [
    {
-      id:1,
+      id:4,
       title:'Arms',
       detail:'~2\'10"with a white watch and soft skin',
       image: 'www/img/arm.jpg'
       },
       {
-          id: 2,
+          id: 5,
       title:'Belt',
       detail:'Tan leather with a silver buckle',
       image: 'www/img/belt.jpg'
       },
         {
-          id:3,
+          id:6,
       title:'Bag',
       detail:'Green Ralph Lauren bag with brown leather trim',
       image: 'www/img/bag.jpg'
@@ -59,8 +60,11 @@ angular.module( 'starter' )
       // Simple index lookup
       return foundItems[itemId];
     },
+    newId: function() {
+      return (++autoid);
+    },
     push: function(item, type) {
-      if (type == "Lost")
+      if (type == "lost")
         return lostItems.push(item);
        else
         return foundItems.push(item);
