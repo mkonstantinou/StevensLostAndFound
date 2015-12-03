@@ -29,7 +29,7 @@ angular.module( 'starter' )
    {
       id:4,
       title:'Arms',
-      detail:'~2\'10"with a white watch and soft skin',
+      detail:'~2\' long with a white watch and soft skin',
       image: 'www/img/arm.jpg'
       },
       {
