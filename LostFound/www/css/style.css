@@ -118,13 +118,23 @@ i.ion-close-round{
 }
 
 .item-title {
-   font-size: large !important;
+   font-size: x-large !important;
   font-weight: bold !important;
 }
 
 .item-detail {
    margin: 0 auto;
-   font-size: large !important;
+   font-size: medium !important;
    width: 70%;
    display: block;
+   padding-bottom: 10px;
+}
+
+.item-label {
+   margin: 0 auto;
+   font-size: large !important;
+   font-weight: bold !important;
+   width: 70%;
+   display: block;
+   padding-bottom: 5px;
 }
