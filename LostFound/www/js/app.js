@@ -84,6 +84,6 @@ angular.module('starter', ['ionic'])
     });
 
 
-  $urlRouterProvider.otherwise( '/' );
+  $urlRouterProvider.otherwise( '/found' );
 
 });
