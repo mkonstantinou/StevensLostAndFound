@@ -8,19 +8,22 @@ angular.module( 'starter' )
    {
       id:1,
       title:'Samsung Galaxy S6',
-      detail:'Has a green flip cover, Lost in Burchard 118',
+      detail:'Has a green flip cover',
+      location: 'Babbio First Floor',
       image: 'www/img/s6.jpg'
       },
         {
           id: 2,
       title:'Water Bottle',
       detail:'Gray with a black strap',
+      location: 'Pierce Dining Hall',
       image: 'www/img/waterbottle.jpg'
       },
         {
           id:3,
       title:'Keys',
       detail:'Contains two gold keys, a gray tag, a blue tag that says "Too cool for traditional manufacturing," and a gray flash drive',
+      location: 'Jacobus Large Conference Room',
       image: 'www/img/keys.jpg'
       }
   ];
@@ -30,18 +33,21 @@ angular.module( 'starter' )
       id:4,
       title:'Arms',
       detail:'~2\' long with a white watch and soft skin',
+      location: 'Jacobus',
       image: 'www/img/arm.jpg'
       },
       {
           id: 5,
       title:'Belt',
       detail:'Tan leather with a silver buckle',
+      location: 'Walker Gym Locker Room',
       image: 'www/img/belt.jpg'
       },
         {
           id:6,
       title:'Bag',
       detail:'Green Ralph Lauren bag with brown leather trim',
+      location: 'America\'s Cup',
       image: 'www/img/bag.jpg'
       }
   ];
