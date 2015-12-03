@@ -1,25 +1,19 @@
 <ion-view ng-controller="detailsController" title="{{item.title}}" style="padding-top: 50px;">
-   <ion-content>
-      <div class="row">
-        <div class="col">
-          <h1 style = "padding-top: 15px; text-align: center;">{{ item.title }}</h1>
-        </div>
+   <ion-content class="center">
+      <div class="item-picture">
+         <img src="{{ item.image }}">
       </div>
-      <div class="row">
-        <div class="col" style="display:flex;justify-content:center;align-items:center;">
-          <img src="{{ item.image }}">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h3>
-            {{ item.detail }}
-          </h3>
-        </div>
+      <h2 class="item-title">{{ item.title }}</h2>
+      <div>
+         <p class="item-detail">{{ item.detail }}</p>
       </div>
    </ion-content>
 
-   <button class="bar bar-footer stevens-primary-header" style="display:flex;justify-content:center;align-items:center;">
-    <div class="button button-clear" style="text-align: center">Claim Item</div>
-   </button>
+      <div ng-controller="claimItemController" ng-hide="hideFab">
+         <button class="bar bar-footer stevens-primary-header" ng-click="openModal()">
+            <h1 class="title">
+            <div div class="bar bar-footer stevens-primary-header" style="display:flex;justify-content:center;align-items:center;">Resolve Lost Item</div>
+         </h1>
+         </button>
+      </div>
 </ion-view>

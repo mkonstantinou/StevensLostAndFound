@@ -43,7 +43,17 @@ angular.module('starter', ['ionic'])
         }
       }
     })
-
+  
+   .state( 'claimItem' , {
+      url: "/claimItem",
+      views: {
+        'claimItem': {
+          templateUrl: 'www/templates/claimItemform/claimItemform.html',
+          controllerName: 'claimItemController'
+        }
+      }
+    })
+  
     .state( 'search' , {
       url: "/search",
       templateUrl: 'www/templates/search/search.html',

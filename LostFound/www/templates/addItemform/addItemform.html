@@ -1,13 +1,13 @@
  <ion-modal-view title="Add Item" data-ng-submit="submit(addItem)" >
    <form name="addItem" >
       <ion-header-bar class="bar fix-buttons stevens-primary-header">
-        <a class="button button-outline button-light button-large" ng-click="closeModal()">Cancel</a>
+        <i class="icon ion-close-round white" style="text-align: right" ng-click="closeModal()"></i>
         <h1 class="title">Add Item</h1>
       </ion-header-bar>
       <ion-content>
         <div ng-model="posttype" class = "button-bar button-small">
-            <ion-radio name="type" ng-value="'lost'" class="button button-block button-small" ng-model="choice">Lost</ion-radio>
-            <ion-radio name="type" ng-value="'found'" class="button button-block button-small" ng-model="choice">Found</ion-radio>
+            <ion-radio name="type" ng-value="'lost'" class="button button-block button-small" ng-model="choice" style="text-align: middle;" >Lost</ion-radio>
+            <ion-radio name="type" ng-value="'found'" class="button button-block button-small" ng-model="choice" style="text-align: middle;">Found</ion-radio>
         </div>
         <div class = "list list-inset">
             <label class="item item-input">

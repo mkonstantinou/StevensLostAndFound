@@ -1,25 +1,13 @@
 <ion-view ng-controller="profileController" title="{{user.name}}" style="padding-top: 50px;">
-   <ion-content>
-      <div class="row">
-        <div class="col">
-          <h1 style = "padding-top: 75px; text-align: center;">{{ user.name }}</h1>
-        </div>
+   <ion-content class="center">
+      <div class="profile-picture big-profile-picture">
+         <img src="{{ user.image }}">
       </div>
-      <div class="row">
-        <div class="col" style="display:flex;justify-content:center;align-items:center;">
-          <img src="{{ user.image }}">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h3>
-            {{ user.detail }}
-          </h3>
-        </div>
-      </div>
+      <h1 class="profile-name">{{ user.name }}</h1>
+      <div class="profile-info">{{ user.detail }}</div>
    </ion-content>
 
-   <button class="bar bar-footer stevens-primary-header" style="display:flex;justify-content:center;align-items:center;">
-    <div class="button button-clear" style="text-align: center">Contact</div>
-   </button>
+   <div div class="bar bar-footer stevens-primary-header" style="display:flex;justify-content:center;align-items:center;">
+      <h1 class="title">Contact</h1>
+   </div>
 </ion-view>

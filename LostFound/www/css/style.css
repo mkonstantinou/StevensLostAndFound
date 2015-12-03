@@ -70,3 +70,61 @@ img {
 ion-content {
   bottom: 75px!important;
 }
+i.ion-close-round{
+   padding: 7px;
+   font-size: 150%;
+}
+
+.center {
+   margin: 0 auto;
+   text-align: center;
+   color: black;
+}
+
+.profile-picture {
+  padding-top: 50px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0 auto;
+  width: 70%;
+  overflow: hidden;
+}
+
+.profile-picture img {
+  width: 70%;
+   border-radius: 100%;
+}
+
+.profile-name {
+  padding-top: 10px;
+  font-size: x-large !important;
+  font-weight: bold !important;
+  text-transform: capitalize;
+}
+
+.profile-info {
+  padding-bottom: 30px;
+  font-size: large !important;
+  text-transform: capitalize;
+}
+
+.item-picture img {
+   padding-top: 30px;
+   margin: 0 auto;
+   display: block;
+  width: 60%;
+   height: 60%;
+}
+
+.item-title {
+   font-size: large !important;
+  font-weight: bold !important;
+}
+
+.item-detail {
+   margin: 0 auto;
+   font-size: large !important;
+   width: 70%;
+   display: block;
+}
