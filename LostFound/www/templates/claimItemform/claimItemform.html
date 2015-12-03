@@ -1,0 +1,33 @@
+<ion-modal-view title="Claim Item">
+   <!--    data-ng-submit="submit(claimItem)"-->
+   <form name="claimItem">
+      <ion-header-bar class="bar fix-buttons stevens-primary-header">
+         <!--        <a class="button button-outline button-light button-large" ng-click="closeModal()">Cancel</a>-->
+         <i class="icon ion-close-round white" style="text-align: right" ng-click="closeModal()"></i>
+         <h1 class="title">Item Poster</h1>
+      </ion-header-bar>
+      <ion-content>
+         <div class="center" style="align-items: center;">
+            <div class="profile-picture big-profile-picture">
+               <img src="{{ user.image }}">
+            </div>
+            <h1 class="profile-name">{{ user.name }}</h1>
+            <div class="profile-info">{{ user.detail }}</div>
+            <label class="item item-input text">
+               <textarea placeholder="Message to Item Poster" name="description" data-ng-model="description" rows="10"></textarea>
+            </label>
+
+            <input style="margin-top:20px;" type="checkbox" id="agree" />
+            <label style="display:inline; float:none" for="agree">
+               I agree with the <a href="/pages/terms-and-conditions">terms and conditions</a>.
+            </label>
+         </div>
+      </ion-content>
+      <button class="bar bar-footer stevens-primary-header white" type="submit">
+         <h1 class="title">
+              <i class="icon ion-checkmark"></i>
+              Confirm
+            </h1>
+      </button>
+   </form>
+</ion-modal-view>

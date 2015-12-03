@@ -1,0 +1,71 @@
+angular.module( 'starter' )
+	.controller('claimItemController', function($scope, $ionicModal, Items )
+	{
+   
+   $scope.user = {
+			name : "Julia Kim",
+			image : "www/img/uni.jpg",
+			detail : "(212) 645-8645"
+		};
+		$scope.hideFab = false;
+		$ionicModal.fromTemplateUrl('www/templates/claimItemform/claimItemform.html',
+		{
+			scope: $scope,
+			animation: 'slide-in-up'
+
+		}).then(function(modal)
+		{
+			$scope.modal = modal;
+		});
+
+		$scope.openModal = function()
+		{
+			$scope.modal.show();
+			$scope.hideFab = true;
+		};
+
+		$scope.closeModal = function()
+		{
+			$scope.modal.hide();
+			$scope.hideFab = false;
+		};
+
+		$scope.$on('$destroy', function()
+		{
+			$scope.modal.remove();
+			$scope.hideFab = false;
+		});
+//		$scope.submit = function(form)
+//		{
+//			if (!validate(form))
+//				return;
+//			
+//			var postType = form["type"].$modelValue;
+//						
+//			var item = {
+//				id: Items.newId(),
+//				title:form["title"].$modelValue ,
+//				detail:form["description"].$modelValue,
+//				image: 'www/img/thumbnail.png'
+//			};
+//			$scope.closeModal();
+//			Items.push(item, postType);
+//		};
+//
+//		function validate(form)
+//		{
+//			if (form == null)
+//				return false;
+//			if (!form["type"].$modelValue)
+//				return false;
+//			if (!form["title"].$modelValue)
+//				return false;
+//			if (!form["description"].$modelValue)
+//				return false;
+//			if (!form["date"].$modelValue)
+//				return false;
+//			
+//			return true;
+//		};
+		//Cleanup the modal when we're done with it!
+	});
