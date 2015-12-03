@@ -9,7 +9,7 @@ angular.module( 'starter' )
 		$scope.items = [
 			{
 				title: 'Home',
-				action: '/'
+				action: 'home'
 			},
 			{
 				title: 'Profile',
@@ -36,7 +36,14 @@ angular.module( 'starter' )
 		$scope.returnBack = function( ) {
 			$scope.showBack = false;
 			$scope.showTabs = true;
-			window.location.href = "#/" + $scope.backButton;
+			if( $scope.backButton != "" )
+			{
+				window.location.href = "#/" + $scope.backButton;
+			}
+			else
+			{
+				window.location.href = "#/found";
+			}
 			$scope.backButton = "";
 		};
 
@@ -66,6 +73,18 @@ angular.module( 'starter' )
 			$scope.showTabs = false;
 			window.location.href = "#/profile";
 			setBackButton();
+		};
+
+		$scope.settings = function( ) {
+			$scope.showBack = true;
+			$scope.showTabs = false;
+			window.location.href = "#/settings";
+			setBackButton();
+		};
+
+		$scope.home = function( )
+		{
+			$scope.returnBack();
 		};
 
 		$scope.foundDetails = function( id ) {

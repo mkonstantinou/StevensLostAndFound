@@ -2,11 +2,11 @@
 	<ion-content style="padding-top: 50px;">
 			<!-- {{ message }}
 			ion-list feed -->
-	
+
 		<ion-list>
 			<ion-item mc-controller="detailsController" ng-repeat="item in lostItems" href="#/found/{{item.id}}">
 				<div>
-					<a class="item item-thumbnail-left" href="#/found/{{item.id}}">
+					<a class="item item-thumbnail-left" ng-click="lostDetails( {{item.id}} )">
 						<img src="{{item.image}}">
 						<h2>{{item.title}}</h2>
 						<p>{{item.detail}}</p>

@@ -1,4 +1,4 @@
-<ion-view ng-controller="detailsController" data-ng-init="imageScaler()" title="{{item.title}}" style="padding-top: 50px;">
+<ion-view ng-controller="detailsController" title="{{item.title}}" style="padding-top: 50px;">
    <ion-content>
       <div class="row">
         <div class="col">
@@ -6,15 +6,15 @@
         </div>
       </div>
       <div class="row">
-        <div class="col" style="display:flex; justify-content:center; align-items:center;">
-          <img id="image" ng-src="{{ item.image }}" alt="{{ item.title }}" height="{{ height }}px" width="{{ width }}px">
-          <h3>
-            {{ item.detail }}
-          </h3>
+        <div class="col" style="display:flex;justify-content:center;align-items:center;">
+          <img src="{{ item.image }}">
         </div>
       </div>
       <div class="row">
         <div class="col">
+          <h3>
+            {{ item.detail }}
+          </h3>
         </div>
       </div>
    </ion-content>
