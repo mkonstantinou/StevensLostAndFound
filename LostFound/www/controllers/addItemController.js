@@ -43,13 +43,15 @@ angular.module( 'starter' )
 				image: 'www/img/thumbnail.png'
 			};
 			$scope.closeModal();
-			Items.push(item);
+			Items.push(item, postType);
 			form.reset();
 		};
 
 		function validate(form)
 		{
 			if (form == null)
+				return false;
+			if (!form["type"].$modelValue)
 				return false;
 			if (!form["title"].$modelValue)
 				return false;

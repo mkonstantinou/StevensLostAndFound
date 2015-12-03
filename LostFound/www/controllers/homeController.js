@@ -59,9 +59,11 @@ angular.module( 'starter' )
       // Simple index lookup
       return foundItems[itemId];
     },
-    push: function(item) {
-      
-      return foundItems.push(item);
+    push: function(item, type) {
+      if (type == "Lost")
+        return lostItems.push(item);
+       else
+        return foundItems.push(item);
     }
   }
 })
