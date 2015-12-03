@@ -9,7 +9,7 @@ angular.module( 'starter' )
 		$scope.items = [
 			{
 				title: 'Home',
-				action: ''
+				action: '/'
 			},
 			{
 				title: 'Profile',
@@ -40,7 +40,7 @@ angular.module( 'starter' )
 			$scope.backButton = "";
 		};
 
-		setBackButton = function( ) {
+		function setBackButton( )  {
 			if( $scope.backButton == "" )
 			{
 				$scope.backButton = $ionicHistory.currentView().stateId;

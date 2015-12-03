@@ -57,8 +57,12 @@ angular.module( 'starter' )
       return foundItems
     },
     get: function(itemId) {
-      // Simple index lookup
-      return foundItems[itemId];
+      var result = foundItems.filter(function (item) { return item.id === itemId });
+      
+      if (result.length == 0)
+        result = lostItems.filter(function (item) { return item.id === itemId });
+      
+      return result[0];
     },
     newId: function() {
       return (++autoid);
