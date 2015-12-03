@@ -8,6 +8,10 @@ angular.module( 'starter' )
 
 		$scope.items = [
 			{
+				title: 'Home',
+				action: ''
+			},
+			{
 				title: 'Profile',
 				action: 'profile'
 			},

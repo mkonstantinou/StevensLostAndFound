@@ -34,20 +34,23 @@ angular.module( 'starter' )
 			if (!validate(form))
 				return;
 			
+			var postType = form["type"].$modelValue;
+						
 			var item = {
-				id:1,
+				id: Items.newId(),
 				title:form["title"].$modelValue ,
 				detail:form["description"].$modelValue,
 				image: 'www/img/thumbnail.png'
 			};
 			$scope.closeModal();
-			Items.push(item);
-			form.reset();
+			Items.push(item, postType);
 		};
 
 		function validate(form)
 		{
 			if (form == null)
+				return false;
+			if (!form["type"].$modelValue)
 				return false;
 			if (!form["title"].$modelValue)
 				return false;
